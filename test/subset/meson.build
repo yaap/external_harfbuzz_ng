@@ -43,6 +43,7 @@ tests = [
   # TODO: re-enable once colrv1 subsetting is stabilized.
   # 'colrv1.notoemoji',
   'colrv1',
+  'colrv1_copy_varstore',
   'colr_with_components',
   'cbdt',
   'variable',
@@ -51,8 +52,14 @@ tests = [
   '32bit_var_store',
   'pin_all_at_default',
   'instantiate_glyf',
+  'instantiate_cff2',
   'full_instance',
   'instance_feature_variations',
+  'instance_no_double_free',
+  'mvar_full_instance',
+  'instance_comp_glyph_empty_child',
+  'post_apply_mvar_delta',
+  'apply_cvar_delta',
 ]
 
 repack_tests = [

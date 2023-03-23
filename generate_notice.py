@@ -78,7 +78,6 @@ NO_COPYRIGHT_FILES = [
   "README.md",
   "README.mingw.md",
   "README.python.md",
-  "README.version",
   "RELEASING.md",
   "TESTING.md",
   "TEST_MAPPING",
@@ -206,6 +205,7 @@ NO_COPYRIGHT_FILES = [
   "src/gen-ucd-table.py",
   "src/gen-use-table.py",
   "src/gen-vowel-constraints.py",
+  "src/harfbuzz-cairo.pc.in",
   "src/harfbuzz-config.cmake.in",
   "src/harfbuzz-gobject.pc.in",
   "src/harfbuzz-icu.pc.in",
@@ -236,7 +236,6 @@ NO_COPYRIGHT_FILES = [
   "subprojects/google-benchmark.wrap",
   "subprojects/packagefiles/ragel/meson.build",
   "subprojects/ragel.wrap",
-  "subprojects/zlib.wrap",
   "util/Makefile.am",
   "util/Makefile.sources",
   "util/meson.build",
@@ -587,7 +586,7 @@ def do_file(path: str, copyrights: set, no_copyright_files: set):
 
     # The COPYING in the in-house dir has full OFL license with description.
     # Use the OFL license description body.
-    if path.endswith("test/shape/data/in-house/COPYING"):
+    if path.endswith("test/shape/data/in-house/COPYING") or path.endswith("test/COPYING"):
       notice = cleanup_and_join(lines[9:])
       copyrights.setdefault(notice, [])
       copyrights[notice].append(path)
