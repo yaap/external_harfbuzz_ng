@@ -1,3 +1,2 @@
-set noparent
-
-file:platform/frameworks/base:/core/java/android/text/OWNERS
+siyamed@google.com
+nona@google.com
